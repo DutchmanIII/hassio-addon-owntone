@@ -2,7 +2,6 @@ FROM linuxserver/daapd:latest
 
 ARG BUILD_ARCH
 
-RUN apk add --no-cache nginx
 RUN apk add --no-cache jq
 
 RUN sed -i -e s#"ipv6 = yes"#"ipv6 = no"#g /etc/owntone.conf.orig \
