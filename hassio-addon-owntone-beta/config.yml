@@ -23,7 +23,7 @@ ports_description:
   3689/tcp: DAAP
   3690/udp: Control port - Airplay
   3691/udp: Timing port - Airplay
-  36890/tcp: Nginx
+
 map:
 #  - config:rw
 #  - media:rw
