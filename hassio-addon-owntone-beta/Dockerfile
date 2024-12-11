@@ -5,6 +5,9 @@ ARG BUILD_ARCH
 RUN apk add --no-cache nginx
 RUN apk add --no-cache jq
 
+RUN mkdir -p /etc/services.d/nginx
+
+
 RUN sed -i -e s#"ipv6 = yes"#"ipv6 = no"#g /etc/owntone.conf.orig \
     && sed -i s#/srv/music#/share/owntone/music#g /etc/owntone.conf.orig \
     && sed -i s#/var/cache/owntone/songs3.db#/share/owntone/dbase_and_logs/songs3.db#g /etc/owntone.conf.orig \
@@ -29,3 +32,4 @@ ADD nginx/ /etc/services.d/nginx/
 ADD nginx-config.conf /etc/nginx/http.d/default.conf
 
 RUN chmod +x /etc/cont-init.d/90-homeassistant
+RUN chmod +x /etc/services.d/nginx/run
