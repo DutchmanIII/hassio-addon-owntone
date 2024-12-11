@@ -7,6 +7,9 @@ RUN apk add --no-cache jq
 
 RUN mkdir -p /etc/services.d/nginx
 
+RUN touch /etc/owntone.conf.orig
+RUN touch /etc/owntone.conf
+RUN chown -R abc:abc /etc/owntone.conf.orig /etc/owntone.conf
 
 RUN sed -i -e s#"ipv6 = yes"#"ipv6 = no"#g /etc/owntone.conf.orig \
     && sed -i s#/srv/music#/share/owntone/music#g /etc/owntone.conf.orig \
