@@ -12,6 +12,10 @@ if [ ! -d "/share/owntone/music" ]; then
   mkdir /share/owntone/music
 fi
 
+if [ ! -e "/share/owntone/owntone.conf" ]; then
+  touch /share/owntone/owntone.conf
+fi
+
 chown -R abc:abc /share/owntone/dbase_and_logs /share/owntone /share/owntone/music
 
 # ugly part
