@@ -33,4 +33,3 @@ ADD nginx-config.conf /etc/nginx/http.d/default.conf
 
 RUN chmod +x /etc/cont-init.d/90-homeassistant
 RUN chmod +x /etc/services.d/nginx/run
-RUN touch /etc/owntone.conf
