@@ -1,8 +1,8 @@
-RUN mkdir /etc/services.d/nginx
-
 FROM linuxserver/daapd:latest
 
 ARG BUILD_ARCH
+
+RUN mkdir /etc/services.d/nginx
 
 RUN apk add --no-cache nginx
 RUN apk add --no-cache jq
