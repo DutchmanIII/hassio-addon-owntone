@@ -13,7 +13,7 @@ if [ ! -d "/share/owntone/music" ]; then
 fi
 
 if [ ! -e "/share/owntone/owntone.conf" ]; then
-  touch /share/owntone/owntone.conf
+  cp -f /etc/owntone.conf.orig /share/owntone/owntone.conf
 fi
 
 chown -R abc:abc /share/owntone/dbase_and_logs /share/owntone /share/owntone/music
