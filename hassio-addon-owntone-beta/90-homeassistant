@@ -31,12 +31,12 @@ IP=$(ifconfig eth0 | grep "inet addr:" | cut -d : -f 2 | cut -d " " -f 1)
 OPTIONS_PATH=/data/options.json
 CONFIG_PATH=/etc/owntone.conf
 
-cp -f /etc/owntone.conf.orig $CONFIG_PATH
+#cp -f /etc/owntone.conf.orig $CONFIG_PATH
 
-sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*uid = .*/uid = \"abc\"/" $CONFIG_PATH
+#sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*uid = .*/uid = \"abc\"/" $CONFIG_PATH
 #sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*logfile = .*/logfile = \"\/var\/log\/owntone.log\"/" $CONFIG_PATH
 
-sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*db_path = .*/db_path = \"\/share\/owntone\/dbase_and_logs\/songs3.db\"/" $CONFIG_PATH
+#sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*db_path = .*/db_path = \"\/share\/owntone\/dbase_and_logs\/songs3.db\"/" $CONFIG_PATH
 
 #sed -i -e "/^#\?general {$/,/^#\?}$/s/^#\?\s*bind_address = .*/bind_address = \"${IP}\"/" $CONFIG_PATH
 
